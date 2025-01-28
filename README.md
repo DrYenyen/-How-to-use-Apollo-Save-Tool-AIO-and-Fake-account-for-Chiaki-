@@ -160,10 +160,9 @@ This is a fix if you want to make use of files that are for the same game but di
 5. Open your game. You should see the same name as before, but a different size or at a different point in the game.
 
 ### Fixing Keystone issues with savedata 
-
-*Assuming the title id of the game or game version are not the issue sometimes you may do everything right but savedata always shows as corrupted. 
-*This usually means the game you have or the game the save came from does not have a matching keystone this is usually an issue with dumped games as they are not rebuilt with the original keystone.
-1. To fix this export the keystone from an already working save file and import it into the save file that you want to fix then copy the save file to the HDD and try it out.
+* Assuming the title id of the game or game version are not the issue sometimes you may do everything right but savedata always shows as corrupted.  
+* This usually means the game you have or the game the save came from does not have a matching keystone this is usually an issue with dumped games as they are not rebuilt with the original keystone.      
+1. To fix this export the keystone from an already working save file and import it into the save file that you want to fix then copy the save file to the HDD and try it out.   
 
 ### I rebuilt my database and now all my homebrew and games are gone how do I get them back?
 
