@@ -1,5 +1,7 @@
 # Usage Instructions
 
+> This usage guide is maintained by [DrYenyen](https://github.com/DrYenyen/)
+
 ## NOTICE 
 
 You must have a fake activated account or already have a real PSN account on the console to use saves from other users and properly export saves. 
@@ -30,6 +32,116 @@ The user ID is the internal description for the local user account. (Example - `
 
 The Account ID is a PSN ID assigned to the local user. It must be 16 hex characters. (Example - `abcdef01234556789`) 
 * To see yours and activate your offline console's user account with it or to generate a fake one for fake activation, read below.
+
+
+## Apollo Save Tool Features and Options Overview 
+The Apollo Main Menu has the following options.
+### Trophies 
+* Here you can backup or import trophies.
+### USB Saves
+* Here you can manage savadata you've put on the USB either from a PC or by copying it from the HDD by using the `Copy save game` option. Or import data you've moved around with PS4 Explorer. You can also import or export keystones when having a rare issue with save files see `Fixing Keystone issues with savedata` for instructions.
+### HDD Saves
+* Here you can manage savedata on the internal drive back it up, Resign it or export it for certain situations see `Managing save files from different CUSA IDs` for more information. Or import data you've moved around with PS4 Explorer. You can also import or export keystones when having a rare issue with save files see `Fixing Keystone issues with savedata` for instructions.
+### Online DB/FTP Server
+* To use this you need an active internet connection it will give you access to save files shared by the community. Alternatively if you have an FTP Server you can set it to show up instead of the Online DB by setting a FTP URL in settings and chagiong the Onilne Saves Server. 
+### User Tools
+* Here you can activate your local account with your real PSN Account-ID or allow Apollo to generate one for you to fake activate see `Activating offline profiles` for instructions. And you can also rebuild or backup your database. See `I rebuilt my database` for instructions.    
+  * NOTICE restoring a database backup when the original users are not present or new ones have been added can cause issues. 
+### Settings 
+* Here you can turn off the background music and animations.
+* Select how saves are sorted. 
+### Settings Overview
+1. Background Music. 
+* Toggles the background music. 
+2. Menu Animations. 
+* Toggles menu animations. 
+3. Sort Saves. 
+* Sets the savedata display order. 
+4. USB Saves Sources. 
+* Toggles between auto and specific possible locations.
+5. Version Update Check. 
+* Toggles version check when opening the app. 
+6. Set FTP Server URL
+* Allows you to set your FTP Server Address. 
+7. Online Saves Server. 
+* Changes between Online DB and FTP Server source for the home menu. 
+8. Clear Local Cache. 
+* Clears any cached files that Apollo uses for browsing OnlineDB and etc.
+9. Update Application Data. 
+* Updates savepatch data. 
+10. Enable Debug Log. 
+* Enables logging file location: /data/apollo/apollo.log
+### About
+Has credits, current Account-ID and console details.
+
+### Icons to the right and left of saves
+* Save files will have an indicator on the right and left based on user input and savedata status. 
+1. The lock. (Located on the right when applicable)
+* The lock indicates an encrypted save. If a lock is not present then the save is decrypted. 
+2. Bookmark. (Located on the right when applicable)
+* The bookmark indicates the save has the same Account-ID as the current user. 
+  * An encrypted save can have both the lock and a bookmark. A decrypted save will have the bookmark when copied from the HDD (current user based) or resigned with the "Apply Changes & Resign" option.
+3. The star. (Located on the left when applicable)
+* The star shows up on the left of a save by clicking the touchpad while a save is highlighted which selects it, multiple saves can be selected.
+4. Warning sign in red with "!"
+* This usually indicates that the savedata is not in the appropriate folder structure and or location. (--- Encrypted save requires fimrware ???---)
+
+## Save Data Options
+* While accessing  USB Saves/HDD Saves submenus and Save file submenus you will see the following options. 
+### Bulk Save Management
+### In HDD Saves
+1. Copy selected Saves to USB.
+* This option copies saves highlighted with the touchpad to the plugged in USB drive in a decrypted format.
+2. Copy all Saves to USB.
+* This option copies all saves to the plugged in USB drive in a decrypted format. 
+3. Start local Web Server.
+* Starts Web Server (needs active internet connection) for easy browser access to backup savedata in decrypted format.
+4. Dump all fingerprints
+* Dumps all keystone fingerprints to a txt. 
+### In USB Saves
+1. Resign selected Saves. 
+* Resigns all saves highlighted with the touchpad to the current Account-ID of the user. 
+2. Resign all decrypted Save files. 
+* Resigns all decrypted saves on the USB.
+3. Copy selected Saves to HDD.
+* This option copies encrypted and decrypted saves highlighted with the touchpad to the HDD. 
+4. Copy all decrypted Saves to HDD. 
+* This option copies all decrypted saves to the HDD. 
+5. Start local Web Server. 
+* Starts Web Server (needs active internet connection) for easy browser access to backup savedata in decrypted format.
+6. Dump all decrypted Save Fingerprints.
+* Dumps all keystone fingerprints to a txt. 
+
+### In save file menus
+1. Apply changes and resign. 
+* Resigns after editing the HEX. Resigns after applying savepatch hacks. Resigns a save that was placed there externally.
+2. View Save Details. 
+* Displays Save details including location, Account ID and etc. 
+3. Delete Save Game.
+* WARNING THIS DELETES THE SAVE GAME FROM THE CURRENT STORAGE LOCATION.
+### File Backup
+1. Copy save game.
+* This option copies decrypted savedata to a desired location.
+2. Upload save backup to FTP.
+* This option allows you to uplaod the current save file to your active FTP Server.   
+  * Only shows up if an FTP Server has been set. Only availble in HDD Saves.
+3. Export save game to Zip.
+* This option copies savedata in an encrypted format in a zip to the USB.
+4. Export decrypted save files.
+* This option exports decrypted savedata to /data/apollo/User-ID/Title-IDofgame-metainfo.
+5. Import decrypted save files. 
+* This option imports decrypted savedata from /data/apollo/User-ID/Title-IDofgame-metainfo.
+6. Hex Edit save game files. 
+* Allows you to edit the savedata in HEX. 
+### Keystone Backup
+1. Export Keystone. 
+* Exports Keystone to /data/apollo/User-ID/Title-IDofgame/keystone from the save. 
+2. Import Keystone.
+* Imports Keystone from /data/apollo/User-ID/Title-IDofgame/keystone to the save. 
+3. Show Keystone Fingerprint. 
+### Cheats
+* Notice this option will show up only on supported games. It will allow you to edit the save file to add money, change stats and etc. 
+1.  Select the options you want to load then select "Apply changes and resign" to save. 
 
 ## Activating offline profiles
 
@@ -70,7 +182,7 @@ Ignore if you have done the above option and already have an activated account g
 3. Select your profile.
 4. Select the account you want to activate and press X.
 5. A string of letters and numbers will show up copy them CORRECTLY then press R2 then X and then keep pressing O till you are asked if you want to exit to the XMB accept then restart the console
-*(the string can be found in About in Apollo Save Tool in case you lose it)
+* The string can be found in About in Apollo Save Tool in case you lose it.
 
 ### Getting the ID needed for Chiaki
 
@@ -142,7 +254,6 @@ Encrypted saves are saves made from retail/unjailbroken PS4s made via Account Da
 
 Decrypted saves are usually your own but sometimes are shared online.
 * Note that Save Wizard is not needed. 
-* Note that the saves must be from 11.00 or lower.
 * If the save file you have has a `sce_sys` folder with a keystone and `param.sfo`
 1. Put it in the following path on a USB drive formatted as exFAT `/PS4/APOLLO/<title-id>` and in Apollo go to USB saves choose the `Copy save game` option and copy it to the HDD.
    * If the save file is a file on it's own.
@@ -159,10 +270,22 @@ This is a fix if you want to make use of files that are for the same game but di
 4. Back to Apollo Save Tool, select HDD saves. Select your new game title ID, select Import decrypted save files. Import them one by one. Select Apply Changes & Resign.
 5. Open your game. You should see the same name as before, but a different size or at a different point in the game.
 
+### Managing save files from different Regions or Game versions
+* This method also works like the option above it but is easier to do in some cases. 
+* This is for if you have a save from EUR version of the game and want to make it work on a US game and etc. 
+  * Source save means the save you want to convert to the other region. 
+  * Target save means the donor save FROM the other region.
+1. Decrypt the source savedata by copying it to the USB drive. 
+2. Decrypt a target donor save from the other region of the game. 
+* In the following steps ignore the sce_sys folder only copy and replace files outside of it. 
+3. Copy the decrypted savedata from the Source save and paste it into the folder of the Target save and overwrite any duplicates. 
+4. Go back to Apollo and copy the decrypted Target save to the HDD. 
+5. Open the game.
+
 ### Fixing Keystone issues with savedata 
-* Assuming the title id of the game or game version are not the issue sometimes you may do everything right but savedata always shows as corrupted.  
-* This usually means the game you have or the game the save came from does not have a matching keystone this is usually an issue with dumped games as they are not rebuilt with the original keystone.      
-1. To fix this export the keystone from an already working save file and import it into the save file that you want to fix then copy the save file to the HDD and try it out.   
+* Assuming the title id of the game or game version are not the issue sometimes you may do everything right but savedata always shows as corrupted. 
+* This usually means the game you have or the game the save came from does not have a matching keystone this is usually an issue with dumped games as they are not rebuilt with the original keystone.
+1. To fix this export the keystone from an already working save file and import it into the save file that you want to fix then copy the save file to the HDD and try it out.
 
 ### I rebuilt my database and now all my homebrew and games are gone how do I get them back?
 
@@ -178,3 +301,74 @@ This is a fix if you want to make use of files that are for the same game but di
 * Optionally you can then create a backup of your current database to use in the future with the restore option.
 
 * NOTICE restoring a database backup when the original users are not present or new ones have been added can cause issues.
+
+
+## Using FTP to Manage Saves
+* The Apollo Save Tool FTP Server feature allows you to download and upload saves from an FTP server. 
+## You must be connected to the same network on both devices and set up the necessary permissions. 
+
+### FileZilla
+
+1. Download and install FileZilla Server.
+2. Open it and create a host user and password. 
+3. Go to "Server" then "Configure" and in "Users" add a user and set a password for it from the right side under "Authentication:".
+4. Go to "Mount points:" set the "Virtual path" as / and set the folder where you want the saves to be stored by pasting it's path or writing it manually.
+5. To ther right of "Mount points:" make sure "Acess mode:" is set to "Read + Write" and that the first 2 boxes are ticked then press "Apply". 
+6. Go to "Server listeners" and set the Protocol for all entries to "Explicits FTP over TLS and insecure plain FTP". 
+7. Open the search bar and type in "Windows Defender Firewall with Advanced Security" go to Inbound Rules.
+8. Choose "New Rule", set it to "Port" then press "Next". Set it to "TCP" and set the port to 21, then press "Next".
+9. Leave "Action" at "Allow the Connection" and press "Next".
+10. Tick all the boxes for "Where does this rule apply?" and press "Next" 
+11. Finally name the rule and press "Finish"
+
+### Native Windows FTP
+* For Windows one of the best options is the FTP server that comes with it. Here is how to enable it.
+1. In the search bar type in "Turn Windows features on or off" and open it.
+2. Under "Internet Information Services" enable "FTP Server" and "Web Management Tools". Restart the PC to enable the features. 
+3. If you do not want to use the credentials of your main user account create a new one.
+4. Right click the Windows icon and choose "Computer Management" or search it in the search bar. 
+5. Go to "Local Users and Groups" then go to "Users".
+6. Create a new user name it and set the password, and remember them. (Set the password to never expire.)
+7. Go back to the search bar and type in "Internet Information Services (IIS)" and open it. 
+8. Open the dropdown on the left with the name of your device.
+9. Click on the device name and under "IIS" find "Server Certificates" and go into it. 
+10. Right click in empty space and choose "Create Self-Signed Certificate" give it a name and press "OK".
+11. Right click on "Sites" and choose "Add FTP Site". 
+12. Name it anything you want and set the path to where you want your saves to be uploaded to then click on "Next".
+13. In "Binding" set the "IP Address" from "All Unassigned" to your current IP from the dropdown.(Open CMD and type in "ipconfig" if needed)
+14. Leave the "Start FTP site automatically" enabled. 
+15. Under "SSL" set it to "No SSL" or "Allow SSL".
+16. Set "Authentication to "Basic". Set "Authorization" to "All users". Tick both "Read" and "Write" for permissions and click "Finish"
+17. In "FTP SSL Settings" set the "SSL Policy" to "Allow SSL Connections".
+18. Set the SSL certificate to the one you created previously you can select it from the dropdown then press "Apply" on the right side of the window.
+19. Go to the FTP server you created and go to "FTP Firewall Support".
+20. Under Data "Channel Range:" set it to 5000-51000.
+21. Under "External IP Address of Firewall" set it to your current IP then press "Apply" on the right side of the window. (Open CMD and type in "ipconfig" if needed)
+22. Open the search bar and type in "Windows Defender Firewall with Advanced Security" go to both Inbound and Outbound Rules and enable the FTP rules as seen in the pictures below.   
+![-](imgs/1.PNG) 
+![-](imgs/2.PNG) 
+23. Back in "Internet Information Services (IIS)" right click on the FTP Site you created and go to "Manage FTP Site" and choose to restart it.
+24. Restart the PC if you cannot connect from Apollo.
+ 
+
+### On Android
+1. On Android download any app that will allow you to be the HOST FTP server. The app "WiFi FTP Server" was tested and works for this. 
+2. You have to set a username and password for the server WiFi FTP Server comes with the defaults of "android" for both but you can change them. 
+3. Connect your phone to the same network as the PS4 and open Apollo. 
+
+### On a NAS
+* TrueNAS Scale will be used as an example. 
+1. Add a new Dataset and name it whatever you want. For example: PS3saves
+2. Go to "Credentials and make a new User and set a password and set the user directory as the Dataset you just created. 
+3. Go to "System Settings" then "Services" and enable the FTP service, setting its path to the Dataset. 
+
+### Connecting to the Server from Apollo
+* The previously created FTP server credentials and IP are required. 
+1. Download and install the latest version of [Apollo](https://github.com/bucanero/apollo-ps4/releases/latest).
+2. Open Apollo and go to Settings.
+3. Select "Set User FTP Server URL" and enter in your FTP server IP along with the username and password then press the start button.
+4. The following structure is a template: ftp://username:password@192.168.0.1/
+5. An example: ftp://peaches:mono58672@192.168.1.9
+6. You can now upload saves to your FTP server by going into the save and choosing "Upload save backup to FTP". 
+7. To download saves you have uploaded go to Settings and set the "Online Saves Server" to "FTP Server" as the source.
+8. Return to the Apollo home screen , navigate to FTP Server, and download the desired saves.  
