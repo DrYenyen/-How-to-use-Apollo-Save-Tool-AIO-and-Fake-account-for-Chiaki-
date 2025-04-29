@@ -50,6 +50,23 @@ The Apollo Main Menu has the following options.
 ### User Tools
 * Here you can activate your local account with your real PSN Account-ID or allow Apollo to generate one for you to fake activate see `Activating offline profiles` for instructions. And you can also rebuild or backup your database. See `I rebuilt my database` for instructions.    
   * NOTICE restoring a database backup when the original users are not present or new ones have been added can cause issues. 
+### User Tools Overview
+1. Activate PS4 Accounts.
+* This option allows you to fake activate accounts on your PS4 with either an auto generated ID or with your real PSN Account-ID for use with savedata transfers. See: [Activating offline profiles](#activating-offline-profiles)
+2. App.db Database Management.
+* This opton allows you to backuup, restore or rebuild your database. 
+
+3. Show Parent Security Passcode. 
+* This option allows you to view the parent code set to the current account. 
+4. Network Tools (Downloader, Web Server)
+1. Local Web Server (full system access)
+*This option allows you to browse the internal storage and download files. The address is http://yourps4ip:8080. 
+2. Toggel Web Browser history. 
+* This option disables Browser history. 
+3. URL link Downloader (http, https, ftp, ftps)
+* This option allows you to download a file from a URL to the `/data/` path.
+5. Extract Archives (RAR, Zip, 7z)
+* This option allows you to extract available archives in the `/data/` path to their own folder in that path. 
 ### Settings 
 * Here you can turn off the background music and animations.
 * Select how saves are sorted. 
@@ -291,8 +308,8 @@ This is a fix if you want to make use of files that are for the same game but di
 
 ## Using FTP to Manage Saves
 * The Apollo Save Tool FTP Server feature allows you to download and upload saves from an FTP server. 
-## You must be connected to the same network on both devices and set up the necessary permissions. 
-
+## For local LAN servers you must be connected to the same network on both devices and a set up the necessary permissions. Optionally if you have a ftp server webhost or from a company ftp://66.77.88.99 , ftp://mywebhost.com , etc you can connect to the external server. 
+* Local LAN is faster.
 ### FileZilla
 1. Download and install FileZilla Server.
 2. Open it and create a host user and password. 
